@@ -1,0 +1,115 @@
+/* Navigation.scss */
+.navigation {
+  background: linear-gradient(90deg, #00b4d8 0%, #48cae4 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 18px 0 18px 0;
+  box-shadow: 0 4px 24px 0 rgba(0,180,216,0.10);
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  flex-wrap: wrap;
+}
+
+.navigation__logo {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.navigation__logo img {
+  max-width: 60px;
+  margin-right: 14px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,180,216,0.10);
+}
+
+.navigation__welcome {
+  margin-left: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(0,180,216,0.10);
+  padding: 6px 16px;
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+}
+
+.navigation__menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0 40px 0 0;
+}
+
+.navigation__menu li {
+  margin: 0 10px;
+}
+
+.navigation__menu button {
+  padding: 8px 22px;
+  border: none;
+  background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,180,216,0.10);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.navigation__menu button:hover {
+  background: linear-gradient(90deg, #48cae4 0%, #00b4d8 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.menu-button {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+@media (max-width: 900px) {
+  .navigation__logo {
+    margin-left: 10px;
+  }
+  .navigation__menu ul {
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-button {
+    display: flex;
+  }
+  .navigation__welcome {
+    margin: 0;
+    font-size: 1rem;
+    padding: 4px 10px;
+  }
+  .navigation__logo img {
+    max-width: 40px;
+  }
+  .navigation__menu button {
+    padding: 8px 12px;
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,195 @@
+@import './variables';
+
+body {
+  background: $primary-light;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: $spacing-xl;
+  font-family: $font-family;
+  background: #fff !important;
+}
+
+.create-cart-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: flex-end;
+  padding: $spacing-lg 0;
+  margin-bottom: $spacing-lg;
+}
+
+.create-cart-btn {
+  background: $gradient-primary;
+  color: white;
+  padding: $spacing-md $spacing-xl;
+  font-size: $font-size-lg;
+  border: none;
+  border-radius: $border-radius-lg;
+  font-weight: 600;
+  box-shadow: $shadow-md;
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  transition: $transition-base;
+  cursor: pointer;
+
+  &:hover {
+    background: $gradient-dark;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: $shadow-lg;
+  }
+}
+
+.create-cart-btn.icon-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00b4d8 0%, #48cae4 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 2px 8px rgba(0,180,216,0.10);
+  border: none;
+  transition: background 0.2s, transform 0.2s;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.create-cart-btn.icon-btn:hover {
+  background: linear-gradient(135deg, #48cae4 0%, #00b4d8 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.08);
+}
+
+.carts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: $spacing-xl;
+  width: 100%;
+  max-width: 1200px;
+  padding: $spacing-lg 0;
+}
+
+.cart {
+  background: white;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-lg;
+  padding: $spacing-xl $spacing-lg;
+  transition: $transition-base;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: 1.5px solid $primary-light;
+  min-height: 420px;
+
+  &:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 32px 0 rgba(0,180,216,0.18);
+    border-color: $primary-color;
+  }
+
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-md;
+    padding-bottom: $spacing-sm;
+    border-bottom: 1px solid $primary-light;
+  }
+
+  h2 {
+    color: $primary-color;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+
+  .cart-buttons {
+    display: flex;
+    gap: $spacing-sm;
+  }
+
+  .edit-btn, .delete-btn {
+    background: $primary-light;
+    color: $primary-dark;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: $shadow-sm;
+    transition: $transition-base;
+    cursor: pointer;
+  }
+  .edit-btn:hover {
+    background: $primary-color;
+    color: white;
+  }
+  .delete-btn {
+    background: $error-color;
+    color: white;
+  }
+  .delete-btn:hover {
+    background: darken($error-color, 10%);
+    color: white;
+  }
+
+  // Contenido del carrito
+  .cart-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: $spacing-md 0 0 0;
+    color: $text-color;
+    font-size: $font-size-base;
+    line-height: 1.5;
+    text-align: left;
+    word-break: break-word;
+  }
+
+  .cart-content strong {
+    color: $primary-dark;
+    font-weight: 600;
+  }
+
+  .cart-content img {
+    margin-top: $spacing-md;
+    max-width: 120px;
+    border-radius: $border-radius-md;
+    box-shadow: $shadow-sm;
+  }
+}
+
+// Responsive
+@media (max-width: 900px) {
+  .carts-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .carts-container {
+    grid-template-columns: 1fr;
+    padding: $spacing-md 0;
+  }
+  .App {
+    padding: $spacing-md;
+  }
+  .cart {
+    padding: $spacing-lg $spacing-sm;
+    min-height: 320px;
+  }
+}

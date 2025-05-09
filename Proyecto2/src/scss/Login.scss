@@ -1,0 +1,167 @@
+@import './variables';
+
+.App {
+  padding-top: 100px; /* Aumentado para que el Header no quede debajo del Navigation */
+}
+
+.main-content {
+  width: 100%;
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: $spacing-xl;
+  font-family: $font-family;
+
+  .login-container {
+    background: white;
+    padding: $spacing-xl;
+    border-radius: $border-radius-lg;
+    box-shadow: $shadow-lg;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    gap: $spacing-xl * 2;
+  }
+
+  .login-content {
+    flex: 1;
+    padding: $spacing-lg;
+  }
+
+  .login-image {
+    flex: 1;
+    background: $gradient-primary;
+    border-radius: $border-radius-lg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $spacing-xl;
+    color: white;
+    text-align: center;
+
+    h3 {
+      font-size: 28px;
+      margin-bottom: $spacing-md;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+      font-size: $font-size-base;
+      opacity: 0.9;
+    }
+  }
+
+  h2 {
+    color: $primary-dark;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: $spacing-lg;
+    text-align: left;
+  }
+
+  .form-group {
+    margin-bottom: $spacing-md;
+    width: 100%;
+
+    label {
+      display: block;
+      margin-bottom: $spacing-xs;
+      color: $text-color;
+      font-size: $font-size-base;
+      font-weight: 500;
+    }
+
+    input {
+      width: 100%;
+      padding: $spacing-md;
+      border: 1px solid $border-color;
+      border-radius: $border-radius-md;
+      font-size: $font-size-base;
+      transition: $transition-base;
+
+      &:focus {
+        outline: none;
+        border-color: $primary-color;
+        box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+      }
+    }
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    width: 100%;
+    margin-top: $spacing-lg;
+  }
+
+  button {
+    width: 100%;
+    padding: $spacing-md;
+    border: none;
+    border-radius: $border-radius-md;
+    font-size: $font-size-base;
+    font-weight: 500;
+    cursor: pointer;
+    transition: $transition-base;
+
+    &.google-btn {
+      background-color: white;
+      color: $text-color;
+      border: 1px solid $border-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: $spacing-md;
+
+      &:hover {
+        background-color: $primary-light;
+        color: white;
+        border-color: $primary-light;
+      }
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &.submit-btn {
+      background: $gradient-primary;
+      color: white;
+      font-size: $font-size-lg;
+
+      &:hover {
+        background: $gradient-dark;
+        transform: translateY(-1px);
+        box-shadow: $shadow-md;
+      }
+    }
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: $spacing-md 0;
+    color: $text-light;
+    font-size: $font-size-base;
+
+    &::before,
+    &::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid $border-color;
+    }
+
+    span {
+      padding: 0 $spacing-md;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+// Colors - Turquoise Palette
+$primary-color: #00b4d8;      // Turquoise principal
+$primary-light: #90e0ef;      // Turquoise claro
+$primary-dark: #0077b6;       // Turquoise oscuro
+$secondary-color: #48cae4;    // Turquoise secundario
+$accent-color: #00b4d8;       // Acento turquoise
+$gradient-start: #00b4d8;     // Inicio del gradiente
+$gradient-end: #0077b6;       // Fin del gradiente
+
+// Neutral Colors
+$background-color: #ffffff;   // Fondo blanco
+$text-color: #2b2d42;        // Texto principal
+$text-light: #8d99ae;        // Texto secundario
+$border-color: #e2e8f0;      // Color de bordes
+$error-color: #ef476f;       // Color de error
+$success-color: #06d6a0;     // Color de éxito
+
+// Typography
+$font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+$font-size-base: 16px;
+$font-size-sm: 14px;
+$font-size-lg: 18px;
+
+// Spacing
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+// Border radius
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+
+// Shadows
+$shadow-sm: 0 1px 2px 0 rgba(0, 180, 216, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 180, 216, 0.1);
+$shadow-lg: 0 10px 15px -3px rgba(0, 180, 216, 0.1);
+
+// Transitions
+$transition-base: all 0.2s ease-in-out;
+
+// Gradients
+$gradient-primary: linear-gradient(135deg, $gradient-start, $gradient-end);
+$gradient-light: linear-gradient(135deg, $primary-light, $primary-color);
+$gradient-dark: linear-gradient(135deg, $primary-color, $primary-dark); 
